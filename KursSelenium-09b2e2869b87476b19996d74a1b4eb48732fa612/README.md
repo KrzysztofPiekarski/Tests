@@ -1,36 +1,27 @@
-<h2>Kod do zajęć z Selenium, kurs ONL_TEA_E_04</h2>
+Code for Selenium classes, course
+After downloading, remember to upload the appropriate driver (depending on the browser and operating system used).
+It is possible to run tests from the IDE and console level:
+2.1. Check in Terminal that you have Maven installed
 
-1. Po pobraniu pamiętaj, aby dograć odpowiedni driver (w zależności od przeglądarki i w zależności 
-od używanego systemu operacyjnego).
-2. Możliwe jest uruchomienie testów z poziomu IDE oraz konsoli:
-
-2.1. Sprawdź w Terminalu, czy masz zainstalowany Maven
-```
 mvn -version
-```
-Jeżeli wyświetlił się numer wersji oznacza to, że wszystko jest w porządku. Jeśli wystąpił błąd, zainstaluj mavena 
-(przykładowa instrukcja dla Windows - https://mkyong.com/maven/how-to-install-maven-in-windows/ 
-i Linux https://www.javahelps.com/2017/10/install-apache-maven-on-linux.html
-na Linuxie powinien być już zainstalowany, jeżeli użyliście skryptu z CodersLab).
+If the version number is displayed, everything is fine. If an error occurred, install maven (example instruction for Windows - https://mkyong.com/maven/how-to-install-maven-in-windows/ and Linux https://www.javahelps.com/2017/10/ install-apache-maven-on-linux.html on Linux should already be installed if you used the script from CodersLab).
 
-2.2. Za pomocą komendy ```cd``` przejdź do folderu z projektem (tam, gdzie znajduje się plik ```pom.xml```).
-2.3. Odpalenie wszystkich testów w repozytorium:
-``` mvn test ```
+2.2. Use the cd command to go to the project folder (where the pom.xml file is). 2.3. Run all the tests in the repository: mvn test
 
-Odpalenie testów w wybranej klasie:
+Launching tests in the selected class:
 
-```mvn clean test -Dtest=GoogleSearchTest test```
+mvn clean test -Dtest = GoogleSearchTest test
 
-Zamiast GoogleSearchTest można podać dowolną nazwę klasy.
+Any class name can be used instead of GoogleSearchTest.
 
-Jest też opcja uruchomienia konkretnego testu z klasy:
+There is also an option to run a specific test from the class:
 
-```mvn clean test -Dtest=FormTest#formTestNoFirstName test```
+mvn clean test -Dtest = FormTest # formTestNoFirstName test
 
-Spowoduje to uruchomienie testu ``formTestNoFirstName`` z klasy ``FormTest``.
+This will run the formTestNoFirstName test from the FormTest class.
 
-Możliwe jest też uruchomienie testów pasujących do zadanego wyrażenia:
+It is also possible to run tests matching a given expression:
 
-```mvn clean test -Dtest=FormTest#formTest* test```
+mvn clean test -Dtest = FormTest # formTest * test
 
-Spowoduje uruchomienie testów zaczynających się od frazy ``formTest`` z klasy ``FormTest``. 
+Runs tests that begin with the formTest phrase from the FormTest class.
